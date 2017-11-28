@@ -1,6 +1,6 @@
 # Set the wd properly to read the files
 
-#  Word counts, line counts and basic data tables?
+#  Getting the data and max line counts 
 blogs <- readLines("en_US.blogs.txt")
 news<- readLines("en_US.news.txt")
 twit<- readLines("en_US.twitter.txt")
@@ -20,6 +20,7 @@ lentwit <- nchar(readLines(contwit))
 max_len_US_twit <- max(lentwit)
 close(contwit)
 
+# Plotting the data
 par(mfrow = c(1, 3))
 
 hist(lenblogs, breaks = 1000, xlim = c(0,2000), col = "blue", main = "Blogs", ylab = "Frecuency", xlab = "Lines Lenght")
